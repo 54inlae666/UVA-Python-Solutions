@@ -31,7 +31,7 @@ def solve():
 
         n_list = list(map(int,input_data[ptr:ptr + case_number]))
 
-        ptr = ptr + case_number
+        ptr += case_number
 
         n_list.sort(key = lambda n : get_sort_key(n,M))
 
