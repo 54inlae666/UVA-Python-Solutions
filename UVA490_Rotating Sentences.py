@@ -2,7 +2,7 @@ import sys
 
 def solve():
 
-    lines = sys.stdin.read().Qsplitlines()
+    lines = sys.stdin.read().splitlines()
 
     max_len = max(len(s) for s in lines)
 
