@@ -20,8 +20,6 @@ def solve():
                     break
             else:
                 print("such number is impossible!")
-
-            
-                
+   
 if __name__ == "__main__":
     solve()
