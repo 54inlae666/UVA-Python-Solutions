@@ -1,21 +1,19 @@
 import sys
 import math
 
-if __name__ == "__main__":
-
-    input_data = sys.stdin.read().split()
-
-    it = iter(input_data)
-
-    for c in it:
-
-        if (n := int(c)) == 0:
+def solve():
+    lines = sys.stdin.read().split()
+    for line in lines:
+        n = int(line)
+        if n == 0:
             break
         
-        ans = 0
+        g = 0
+        for i in range(1, n):
+            for j in range(i + 1, n + 1):
+                g += math.gcd(i, j)
+        
+        print(g)
 
-        for j in range(2,n + 1):
-            for i in range(1,j):
-                ans += math.gcd(i,j)
-
-        print(ans)
+if __name__ == "__main__":
+    solve()
